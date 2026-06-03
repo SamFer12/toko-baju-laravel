@@ -47,7 +47,7 @@ Route::middleware('admin.session')->group(function () {
     Route::post('barang-masuk/store', [BarangMasukController::class, 'store']);
 
     Route::get('penjualan', [PenjualanController::class, 'index']);
-Route::post('penjualan/store', [PenjualanController::class, 'store'])>name('penjualan.store');
+    Route::post('penjualan/store', [PenjualanController::class, 'store'])->name('penjualan.store');
 
     Route::get('laporan/stok', [LaporanController::class, 'stok']);
     Route::get('laporan/barang-masuk', [LaporanController::class, 'barangMasuk']);
