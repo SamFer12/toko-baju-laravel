@@ -12,4 +12,15 @@ class DetailPenjualan extends Model
         'jumlah',
         'subtotal'
     ];
+    public function barang()
+    {
+        return $this->belongsTo(
+            Barang::class
+        );}
+    public function penjualan()
+    {
+        return $this->belongsTo(
+            Penjualan::class
+        );
+    }
 }
