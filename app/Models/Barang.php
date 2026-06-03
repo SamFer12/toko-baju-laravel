@@ -21,12 +21,10 @@ class Barang extends Model
     }
     public function barangMasuk()
     {
-    return $this->hasMany(BarangMasuk::class);
+        return $this->hasMany(BarangMasuk::class);
     }
     public function detailPenjualan()
     {
-    return $this->hasMany(
-        DetailPenjualan::class
-    );
+        return $this->hasMany(DetailPenjualan::class);
     }
 }
