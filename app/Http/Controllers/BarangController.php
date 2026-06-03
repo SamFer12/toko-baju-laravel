@@ -34,8 +34,18 @@ class BarangController extends Controller
      */
     public function store(Request $request)
     {
-        Barang::create($request->all());
-        return back();
+        Barang::create([
+            'kode_barang' => $request->kode_barang,
+            'nama_barang' => $request->nama_barang,
+            'kategori' => $request->kategori,
+            'harga_beli' => $request->harga_beli,
+            'harga_jual' => $request->harga_jual,
+            'stok' => $request->stok,
+            'supplier_id' => $request->supplier_id,
+        ]);
+        return redirect()
+            ->route('barang.index')
+            ->with('success', 'Barang berhasil ditambahkan');
     }
 
     /**

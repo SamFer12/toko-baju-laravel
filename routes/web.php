@@ -43,13 +43,16 @@ Route::middleware('admin.session')->group(function () {
     Route::resource('barang', BarangController::class);
     Route::resource('supplier', SupplierController::class);
 
-    Route::get('barang-masuk', [BarangMasukController::class, 'index']);
-    Route::post('barang-masuk/store', [BarangMasukController::class, 'store']);
+    Route::get('barang-masuk',[BarangMasukController::class, 'index'])->name('barang-masuk.index');
+    Route::post('barang-masuk/store',[BarangMasukController::class, 'store'])->name('barang-masuk.store');
 
-    Route::get('penjualan', [PenjualanController::class, 'index']);
-Route::post('penjualan/store', [PenjualanController::class, 'store'])>name('penjualan.store');
+    Route::get('penjualan',[PenjualanController::class, 'index'])->name('penjualan.index');
+    Route::post('penjualan/store',[PenjualanController::class, 'store'])->name('penjualan.store');
 
     Route::get('laporan/stok', [LaporanController::class, 'stok']);
     Route::get('laporan/barang-masuk', [LaporanController::class, 'barangMasuk']);
     Route::get('laporan/penjualan', [LaporanController::class, 'penjualan']);
+
+
+    Route::resource('supplier', SupplierController::class);
 });
