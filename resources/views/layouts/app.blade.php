@@ -186,6 +186,27 @@
                 font-size: 18px;
             }
         }
+
+        @media print {
+            body {
+                background: #fff;
+            }
+
+            .sidebar,
+            .no-print {
+                display: none !important;
+            }
+
+            .content {
+                margin: 0;
+                padding: 0;
+            }
+
+            .card-box {
+                border-color: #d6d6d6;
+                break-inside: avoid;
+            }
+        }
     </style>
 </head>
 
