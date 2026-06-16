@@ -223,7 +223,7 @@
                 <svg viewBox="0 0 24 24"><rect x="3" y="3" width="7" height="7" rx="1.5" /><rect x="14" y="3" width="7" height="7" rx="1.5" /><rect x="3" y="14" width="7" height="7" rx="1.5" /><rect x="14" y="14" width="7" height="7" rx="1.5" /></svg>
                 <span>Dashboard</span>
             </a>
-            <a href="{{ url('/barang') }}" class="menu {{ request()->is('barang*') ? 'active' : '' }}">
+            <a href="{{ url('/barang') }}" class="menu {{ request()->is('barang') ? 'active' : '' }}">
                 <svg viewBox="0 0 24 24"><path d="M21 8.5 12 3 3 8.5l9 5.5 9-5.5Z" /><path d="M3 8.5v8.9l9 5.1 9-5.1V8.5" /><path d="M12 14v8.5" /></svg>
                 <span>Data Barang</span>
             </a>
